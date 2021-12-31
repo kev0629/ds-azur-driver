@@ -79,3 +79,7 @@ a {
 .flag{
   width:30px;
 }
+.home{
+  background-image: url('../public/Images/Lexus.jpg');
+  background-size: cover;
+}

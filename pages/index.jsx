@@ -15,6 +15,8 @@ export default function Home() {
       </Head>
       <main>
         <Navbar language={language} />
+        <div className="home">
+        </div>
       </main>
     </div>
   )
