@@ -1,6 +1,10 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import Navbar from '../Component/Navbar'
+import Main from '../Component/Main'
+import WhiteLine from '../Component/WhiteLine'
+import Prestation from '../Component/Prestation'
+import Reservation from '../Component/Reservation'
 import { useState } from 'react'
 // import styles from '../styles/Home.module.css'
 
@@ -15,8 +19,11 @@ export default function Home() {
       </Head>
       <main>
         <Navbar language={language} />
-        <div className="home">
-        </div>
+        <Main language={language} />
+        <WhiteLine />
+        <Prestation language={language} />
+        <WhiteLine />
+        <Reservation/>
       </main>
     </div>
   )
