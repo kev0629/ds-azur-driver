@@ -212,4 +212,32 @@ grid-row-gap: 10px;
 .date-time { grid-area: 2 / 10 / 3 / 12; } 
 .options { grid-area: 3 / 10 / 4 / 12; } 
 .val-km { grid-area: 4 / 4 / 5 / 7; } 
-.val-eur { grid-area: 4 / 7 / 5 / 10; } 
+.val-eur { grid-area: 4 / 7 / 5 / 10; }
+
+.input{
+  background: #333333;
+  border-radius: 50px;
+  border: none;
+  width: 645px;
+  height: 80px;
+  font-size: 20px;
+  color: #fff;
+  text-indent: 10px;
+  
+
+}
+.end-of-input{
+  background: #333333;
+  border-radius: 50px;
+  border: none;
+  height: 80px;
+  width: 6px;
+  font-size: 20px;
+  color: #fff;
+  text-indent: 10px;
+  display: inline-block;
+}
+.result{
+  font-size: 30px;
+  text-align: center;
+}
