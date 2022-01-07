@@ -5,6 +5,7 @@ import Main from '../Component/Main'
 import WhiteLine from '../Component/WhiteLine'
 import Prestation from '../Component/Prestation'
 import Reservation from '../Component/Reservation'
+import Contact from '../Component/Contact'
 import { useState } from 'react'
 // import styles from '../styles/Home.module.css'
 
@@ -24,6 +25,8 @@ export default function Home() {
         <Prestation language={language} />
         <WhiteLine />
         <Reservation/>
+        <WhiteLine />
+        <Contact/>
       </main>
     </div>
   )

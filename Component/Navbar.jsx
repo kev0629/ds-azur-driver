@@ -32,11 +32,11 @@ const Navbar = (props) => {
                             onMouseLeave={unsetUnderline}>Contact</li>
                     </ul>
                 </div>
-                <div className='flags'>
+                {/* <div className='flags'>
                     <div className="flag"style={props.language=='fr'?{opacity:1}:{opacity:0.5}}><Flags.FR title="Franais"/></div>
                     <div className="flag" style={props.language=='en'?{opacity:1}:{opacity:0.5}}><Flags.GB title="English"/></div>
                     <div className="flag" style={props.language=='it'?{opacity:1}:{opacity:0.5}}><Flags.IT title="Italiano"/></div>
-                </div>
+                </div> */}
             </nav>
         </div>
     );

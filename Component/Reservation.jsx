@@ -2,11 +2,16 @@ import React,{ useState } from 'react';
 import Autocomplete from "react-google-autocomplete";
 import {LoadScript, DistanceMatrixService } from "@react-google-maps/api";
 import TittleSection from './TittleSection'
+import Image from 'next/image';
+import weel from '../public/images/roue.svg'
+import loupe from '../public/images/loupe.svg'
 
 function Reservation() {
-const [pickUp, setPickUp] = useState(null);
-  const [dropOff, setDropOff] = useState(null);
-  const [distance, setDistance] = useState(null);
+    const [pickUp, setPickUp] = useState(null);
+    const [dropOff, setDropOff] = useState(null);
+    const [distance, setDistance] = useState(null);
+    const [date, setDate] = useState(null);
+    const [time, setTime] = useState(null);
     return (
         <div>
             
@@ -30,6 +35,9 @@ const [pickUp, setPickUp] = useState(null);
                             componentRestrictions: { country: "fr" },
                         }}
                         />
+                    <div className="icon-search">
+                        <Image src={loupe} alt='search' />
+                    </div>
                 </div> 
                 <div className="drop-off">
                 <Autocomplete
@@ -44,15 +52,18 @@ const [pickUp, setPickUp] = useState(null);
                             fields:['ALL'],
                             componentRestrictions: { country: "fr" },
                         }}
-                        />*
+                        />
+                    <div className="icon-search">
+                        <Image src={loupe} alt='search' />
+                    </div>
                 </div> 
                 <div className="date-time">
-                <input type="date" />
-                <input type="time" />
+                <input type="date" className='input-date play-fair-font' onChange={(e)=>setDate(e.target.value)} />
+                <input type="time" className='input-time play-fair-font' onChange={(e)=>setTime(e.target.value)} />
                 </div> 
-                <div className="options">
+                {/* <div className="options">
                     <button>Options</button>
-                </div>
+                </div> */}
                 <LoadScript
                     googleMapsApiKey={process.env.NEXT_PUBLIC_GOOGLE_MAP_API_KEY}
                     libraries={['places']}>
@@ -69,14 +80,16 @@ const [pickUp, setPickUp] = useState(null);
                     }
                     }
                     />:console.log("No enouth data")}
-                    {distance?<div className="result val-km">
-                    {           distance} km
-                              </div> 
-                              :''}
-                    {distance?<div className="result val-eur">
-                                {(distance*3).toFixed(2)} euros
-                              </div>:''}
+                    <div className="result val-km">
+                        <Image src={weel} width={315} alt='distance' height={315}/>
+                        <p className='result-quot'>{distance?distance:'...'} km</p>
+                    </div>
+                    <div className="result val-eur">
+                        <Image src={weel} width={315} alt='prix' height={315}/>
+                        <p className='result-quot'>{distance?(distance*3).toFixed(2):'...'} €</p>
+                    </div>
                 </LoadScript>
+                
             </div>
         </div>
     )

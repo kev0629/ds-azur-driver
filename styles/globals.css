@@ -201,7 +201,7 @@ h1.slogan{
   padding: 50px;
 display: grid; 
 grid-template-columns: repeat(12, 1fr); 
-grid-template-rows: repeat(4, 1fr); 
+grid-template-rows: repeat(6, 1fr); 
 grid-column-gap: 10px;
 grid-row-gap: 10px; 
 }
@@ -211,8 +211,8 @@ grid-row-gap: 10px;
 .drop-off { grid-area: 3 / 3 / 4 / 9; } 
 .date-time { grid-area: 2 / 10 / 3 / 12; } 
 .options { grid-area: 3 / 10 / 4 / 12; } 
-.val-km { grid-area: 4 / 4 / 5 / 7; } 
-.val-eur { grid-area: 4 / 7 / 5 / 10; }
+.val-km { grid-area: 4 / 4 / 7 / 7; } 
+.val-eur { grid-area: 4 / 7 / 7 / 10; }
 
 .input{
   background: #333333;
@@ -226,18 +226,42 @@ grid-row-gap: 10px;
   
 
 }
-.end-of-input{
-  background: #333333;
-  border-radius: 50px;
-  border: none;
-  height: 80px;
-  width: 6px;
-  font-size: 20px;
-  color: #fff;
-  text-indent: 10px;
-  display: inline-block;
-}
 .result{
   font-size: 30px;
   text-align: center;
+}
+.input-date{
+  background: #333333;
+  color: #fff;
+  border: none;
+  width: 193px;
+  height: 40px;
+  border-radius:25px 25px 0 0 ;
+  text-indent: 10px
+}
+.input-time{
+  background: #333333;
+  color: #fff;
+  border: none;
+  width: 193px;
+  height: 40px;
+  border-radius:0 0 25px 25px;
+  text-indent: 10px;
+}
+p.result-quot{
+  margin: 0;
+  position: relative;
+  bottom: 180px
+}
+.icon-search{
+  /* margin: 0; */
+  position: relative;
+  bottom: 60px;
+  left: 580px;
+  width: 44px;
+  align-items: center;
+}
+::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+  margin-right: 30px;
 }
