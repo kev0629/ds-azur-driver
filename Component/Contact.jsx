@@ -5,7 +5,7 @@ const Contact = () => {
         <div className='Contact'>
             <div className="title">
                     <TittleSection mainTitle='Contact' secondaryTitle='Disponible et à l’écoute' />
-                </div>
+            </div>
             
         </div>
     );
