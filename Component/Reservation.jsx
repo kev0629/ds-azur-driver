@@ -13,7 +13,7 @@ function Reservation() {
     const [date, setDate] = useState(null);
     const [time, setTime] = useState(null);
     return (
-        <div>
+        <>
             
             <div className="reservation"> 
                 <div className="title">
@@ -91,7 +91,7 @@ function Reservation() {
                 </LoadScript>
                 
             </div>
-        </div>
+        </>
     )
 }
 

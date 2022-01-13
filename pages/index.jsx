@@ -6,6 +6,7 @@ import WhiteLine from '../Component/WhiteLine'
 import Prestation from '../Component/Prestation'
 import Reservation from '../Component/Reservation'
 import Contact from '../Component/Contact'
+import Footer from '../Component/Footer.jsx'
 import { useState } from 'react'
 // import styles from '../styles/Home.module.css'
 
@@ -27,6 +28,8 @@ export default function Home() {
         <Reservation/>
         <WhiteLine />
         <Contact/>
+        <WhiteLine />
+        <Footer/>
       </main>
     </div>
   )

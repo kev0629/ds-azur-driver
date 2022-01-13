@@ -25,9 +25,10 @@ a {
   background-color: #333333;
   width: auto;
   color: #fff;
-  font-size: 20px;
-  height: 100px;
+  font-size: 18px;
   z-index: 1;
+  position: fixed;
+  width: 100%;
 }
 .logo-section{
   padding-top: 29px !important;
@@ -149,10 +150,13 @@ h1.slogan{
 .card{
   background-color: #333333;
   box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
-  padding: 20px;
+  
   margin-top: 20px;
   margin-bottom: 20px;
   text-align: center;
+}
+.card-text{
+  padding: 20px;
 }
 .prestation-title{
   padding: 30px;
@@ -172,6 +176,7 @@ h1.slogan{
   box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.25);
   border-radius: 5px;
   padding: 30px;
+  line-height: 22px;
 }
 .prestations-list-title{
   font-size: 18px;
@@ -264,4 +269,65 @@ p.result-quot{
 ::-webkit-calendar-picker-indicator {
   filter: invert(1);
   margin-right: 30px;
+}
+.contact { 
+  display: grid; 
+  grid-template-columns: repeat(12, 1fr); 
+  grid-template-rows: repeat(1, 1fr); 
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  }
+  .contact-title { 
+    grid-area: 1 / 1 / 2 / 6;
+    padding: 50px; } 
+  .contact-card { grid-area: 2 / 1 / 4 / 7; } 
+  .cadre { 
+    grid-area: 1 / 7 / 4 / 13;
+    background: #333333;
+    opacity: 0.9;
+    font-size: 20px;
+    line-height: 34px;
+    padding: 20px;}
+
+.footer{
+  background: #333333;
+  display: grid;
+  padding: 25px 50px 0 50px;
+  grid-template-columns: repeat(12, 1fr); 
+  grid-template-rows: repeat(1, 1fr);
+  padding-bottom: 10px;
+}
+.footer-left{
+  grid-area: 1 / 1 / 2 / 6;
+  font-size: 15px;
+  line-height: 33px;
+  letter-spacing: 0.1px;
+}
+.footer-right{
+  grid-area: 1 / 8 / 2 / 13;
+  font-size: 15px;
+  line-height: 33px;  
+  letter-spacing: 0.1px;
+}
+.bgWrap {
+  position: fixed;
+  height: 100px;
+  width: 100px;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.bgText {
+  margin: 0;
+  font-size: 2rem;
+  line-height: 3rem;
+  text-align: center;
+  padding-top: 40vh;
+  text-shadow: 1px 1px 1px #3c5c5e;
+}
+.icon{
+  margin-top: 50px;
+  height: 30px;
+  width: 50px;
+  align-items: center;
 }

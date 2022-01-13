@@ -1,5 +1,10 @@
 import React from 'react'
 import TittleSection from './TittleSection'
+import Image from 'next/image'
+import presentation1 from './../public/Images/presentation.png'
+import presentation2 from './../public/Images/presentation.png'
+import presentation3 from './../public/Images/presentation.png'
+import presentation4 from './../public/Images/presentation.png'
 
 function Prestation() {
     return (
@@ -38,24 +43,39 @@ function Prestation() {
 
                 </div>
                 <div className="div3 card">
-                    <p className='beba-font'>SÉCURITÉ ET DISCRÉTION</p>
-                    <div className="card-line"></div>
-                    <p className='text-card'>Nous assurons votre transport avec professionnalisme. </p>
+                    <Image src={presentation1} placeholder="blur" alt='presentation' height={300} width={308} />
+                    <div className='card-text'>
+                        <p className='beba-font'>SÉCURITÉ ET DISCRÉTION</p>
+                        <div className="card-line"></div>
+                        <p className='text-card'>Nous assurons votre transport avec professionnalisme. </p>
+                    </div>
+                    
                 </div>
                 <div className="div4 card">
-                    <p className='beba-font'>SERVICE DE QUALITÉ</p>
+                    <Image src={presentation2} placeholder="blur" alt='presentation' height={300} width={308} />
+                    <div className='card-text'>
+                        <p className='beba-font'>SERVICE DE QUALITÉ</p>
                     <div className="card-line"></div>
                     <p className='text-card'>Un service haut de gamme destiné à rendre vos trajets plus agréables.</p>
+                    </div>
+                    
                 </div>
                 <div className="div5 card">
-                    <p className='beba-font'>PONCTUALITÉ ET CONFORT</p>
-                    <div className="card-line"></div>
-                    <p className='text-card'>Voyagez à bord de véhicules luxueux avec de nombreux services.</p>
+                <Image src={presentation3} placeholder="blur" alt='presentation' height={300} width={308} />
+                    <div className='card-text'>
+                        <p className='beba-font'>PONCTUALITÉ ET CONFORT</p>
+                        <div className="card-line"></div>
+                        <p className='text-card'>Voyagez à bord de véhicules luxueux avec de nombreux services.</p>
+                    </div>
                 </div>
                 <div className="div6 card">
-                    <p className='beba-font'>TRANSPARANCE ET SIMPLICITÉ</p>
-                    <div className="card-line"></div>
-                    <p className='text-card'>Les tarifs sont forfaitaires et établis à l’avance lors de la demande de réservation.</p>
+                <Image src={presentation4}  placeholder="blur" alt='presentation' height={300} width={308} />
+                    <div className='card-text'>
+                        <p className='beba-font'>TRANSPARANCE ET SIMPLICITÉ</p>
+                        <div className="card-line"></div>
+                        <p className='text-card'>Les tarifs sont forfaitaires et établis à l’avance lors de la demande de réservation.</p>
+                    </div>
+                    
                 </div>
             </div>
         </div>
