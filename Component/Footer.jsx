@@ -7,7 +7,7 @@ export default function Footer() {
             <div className='footer'>
                 <div className='footer-left'>
                 MENTIONS LÉGALES <br />
-                Propriétaire du site <br />
+                Propriétaire du site 
                 M David Saffioti <br />
                 Adresse : 30 traverse des Cades 06370 Mouans Sartoux <br />
                 Tel : 06 08 07 08 73 <br />

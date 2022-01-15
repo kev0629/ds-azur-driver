@@ -27,7 +27,7 @@ const Navbar = (props) => {
                         <li onMouseOver={setUnderline}
                             onMouseLeave={unsetUnderline}>Prestation</li>
                         <li onMouseOver={setUnderline}
-                            onMouseLeave={unsetUnderline}>Reservation</li>
+                            onMouseLeave={unsetUnderline}>Réservation</li>
                         <li onMouseOver={setUnderline}
                             onMouseLeave={unsetUnderline}>Contact</li>
                     </ul>

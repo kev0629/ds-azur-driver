@@ -5,6 +5,7 @@ import TittleSection from './TittleSection'
 import Image from 'next/image';
 import weel from '../public/images/roue.svg'
 import loupe from '../public/images/loupe.svg'
+import { motion } from "framer-motion"
 
 function Reservation() {
     const [pickUp, setPickUp] = useState(null);
@@ -81,7 +82,10 @@ function Reservation() {
                     }
                     />:console.log("No enouth data")}
                     <div className="result val-km">
-                        <Image src={weel} width={315} alt='distance' height={315}/>
+                        <div >
+                            <Image src={weel} width={315} alt='distance' height={315}/>
+                        </div>
+                        
                         <p className='result-quot'>{distance?distance:'...'} km</p>
                     </div>
                     <div className="result val-eur">
