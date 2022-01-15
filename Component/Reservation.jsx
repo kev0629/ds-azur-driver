@@ -5,7 +5,7 @@ import TittleSection from './TittleSection'
 import Image from 'next/image';
 import weel from '../public/images/roue.svg'
 import loupe from '../public/images/loupe.svg'
-import { motion } from "framer-motion"
+import { motion, useAnimation } from "framer-motion"
 
 function Reservation() {
     const [pickUp, setPickUp] = useState(null);
@@ -13,6 +13,8 @@ function Reservation() {
     const [distance, setDistance] = useState(null);
     const [date, setDate] = useState(null);
     const [time, setTime] = useState(null);
+    const controls = useAnimation();
+    const [rotate, setRotate] = useState(0);
     return (
         <>
             
@@ -77,20 +79,26 @@ function Reservation() {
                     callback = {(response) => {
                         if (pickUp && dropOff) {
                         setDistance((response.rows[0].elements[0].distance.value/1000).toFixed(2))
+                        // controls.start({
+                        //     rotate: 360,
+                        //     transition: { duration: 3 },
+                        //   })
+                        setRotate(360)
                         }
                     }
                     }
                     />:console.log("No enouth data")}
                     <div className="result val-km">
-                        <div >
+                        <motion.div animate={{rotate:rotate,transition: { duration: 3 }}} initial={false}>
                             <Image src={weel} width={315} alt='distance' height={315}/>
-                        </div>
-                        
-                        <p className='result-quot'>{distance?distance:'...'} km</p>
+                        </motion.div>
+                        <p className='result-quot'>{distance?distance+' km':''}</p>
                     </div>
                     <div className="result val-eur">
-                        <Image src={weel} width={315} alt='prix' height={315}/>
-                        <p className='result-quot'>{distance?(distance*3).toFixed(2):'...'} €</p>
+                        <motion.div animate={controls} >
+                            <Image src={weel} width={315} alt='prix' height={315}/>
+                        </motion.div>
+                        <p className='result-quot'>{distance?(distance*3).toFixed(2)+' €':''} </p>
                     </div>
                 </LoadScript>
                 
