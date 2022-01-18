@@ -1,6 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
-import bg from '../public/images/Lexus_bg.jpg'
+import bg from '../public/I mages/Lexus_bg.jpg'
 import { motion } from "framer-motion"
 
 const Main = () => {
