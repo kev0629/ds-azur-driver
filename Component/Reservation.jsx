@@ -3,7 +3,7 @@ import Autocomplete from "react-google-autocomplete";
 import {LoadScript, DistanceMatrixService } from "@react-google-maps/api";
 import TittleSection from './TittleSection'
 import Image from 'next/image';
-import weel from '../public/Images/roue.svg'
+import weel from '../public/Images/Roue.svg'
 import loupe from '../public/Images/loupe.svg'
 import { motion, useAnimation } from "framer-motion"
 
