@@ -210,7 +210,12 @@ h1.slogan{
 .text-card{
   font-size: 14px;
 }
+
+.reservation{
+  position: relative;
+}
 .reservation { 
+  /* position: absolute; */
   padding: 50px;
 display: grid; 
 grid-template-columns: repeat(12, 1fr); 

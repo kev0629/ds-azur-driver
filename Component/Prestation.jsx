@@ -43,7 +43,7 @@ function Prestation() {
 
                 </div>
                 <div className="div3 card">
-                    <Image src={presentation1} placeholder="blur" alt='presentation' height={300} width={308} />
+                    <Image src={presentation1} placeholder="blur" alt='presentation'layout='responsive' />
                     <div className='card-text'>
                         <p className='beba-font'>SÉCURITÉ ET DISCRÉTION</p>
                         <div className="card-line"></div>
@@ -52,7 +52,7 @@ function Prestation() {
                     
                 </div>
                 <div className="div4 card">
-                    <Image src={presentation2} placeholder="blur" alt='presentation' height={300} width={308} />
+                    <Image src={presentation2} placeholder="blur" alt='presentation' layout='responsive' />
                     <div className='card-text'>
                         <p className='beba-font'>SERVICE DE QUALITÉ</p>
                     <div className="card-line"></div>
@@ -61,7 +61,7 @@ function Prestation() {
                     
                 </div>
                 <div className="div5 card">
-                <Image src={presentation3} placeholder="blur" alt='presentation' height={300} width={308} />
+                <Image src={presentation3} placeholder="blur" alt='presentation' layout='responsive' />
                     <div className='card-text'>
                         <p className='beba-font'>PONCTUALITÉ ET CONFORT</p>
                         <div className="card-line"></div>
@@ -69,7 +69,7 @@ function Prestation() {
                     </div>
                 </div>
                 <div className="div6 card">
-                <Image src={presentation4}  placeholder="blur" alt='presentation' height={300} width={308} />
+                <Image src={presentation4}  placeholder="blur" alt='presentation' layout='responsive' />
                     <div className='card-text'>
                         <p className='beba-font'>TRANSPARANCE ET SIMPLICITÉ</p>
                         <div className="card-line"></div>
