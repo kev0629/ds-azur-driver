@@ -17,8 +17,7 @@ function Reservation() {
     const [rotate, setRotate] = useState(0);
     const [ libraries ] = useState(['places']);
     useEffect(() => {
-        setRotate(r => r+360)
-        console.log('hello');
+        setRotate(r => r+360);
     }, [distance]);
     return (
             <>
