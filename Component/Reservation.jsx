@@ -20,14 +20,17 @@ function Reservation() {
         setRotate(r => r+360);
     }, [distance]);
     return (
-            <>
+            <div className='reservation'>
                 <Image 
                     src={background} 
                     alt='road'
                     placeholder='blur'
-                    layout='fill'
-                    className='bg'/>
-                    <div className="reservation">
+                    
+                    className='bg'
+                    layout="responsive"
+                width={1440}
+                height={850}/>
+                    <div className="reservation-section">
                         <div className="title">
                             <TittleSection mainTitle='Réservation' secondaryTitle='Votre devis sur mesure' />
                         </div> 
@@ -48,7 +51,7 @@ function Reservation() {
                                 }}
                                 />
                             <div className="icon-search">
-                                <Image src={loupe} alt='search' />
+                                <Image src={loupe} alt='search' layout="responsive" />
                             </div>
                         </div> 
                         <div className="drop-off">
@@ -94,20 +97,19 @@ function Reservation() {
                             />:console.log("No enouth data")}
                             <div className="result val-km">
                                 <motion.div  animate={{ rotate: rotate }} transition={{ duration: 1 }}> 
-                                {/* animate={{rotate:rotate,transition: { duration: 3 }}} */}
-                                    <Image src={weel} width={315} alt='distance' height={315}/>
+                                    <Image src={weel} width={315} alt='distance' height={315} layout="responsive"/>
                                 </motion.div>
                                 <p className='result-quot'>{distance?distance+' km':''}</p>
                             </div>
                             <div className="result val-eur">
                                 <motion.div  animate={{ rotate: rotate }} transition={{ duration: 1 }}>
-                                    <Image src={weel} width={315} alt='prix' height={315}/>
+                                    <Image src={weel} width={315} alt='prix' height={315} layout="responsive"/>
                                 </motion.div>
                                 <p className='result-quot'>{distance?(distance*3).toFixed(2)+' €':''} </p>
                             </div>
                         </LoadScript>
                     </div>
-        </>
+        </div>
     )
 }
 
