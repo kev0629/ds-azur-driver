@@ -15,7 +15,9 @@ const Navbar = (props) => {
         <div>
             <nav className="navbar">
                 <div className='logo-section'>
-                    <Image src={logo} width={894/9} height={383/9} className='logo' alt="logo" />
+                    <Link href='/#acceuil'>
+                        <a><Image src={logo} width={894/9} height={383/9} className='logo' alt="logo" /></a>
+                    </Link>
                 </div>
                 <div className='title'>
                     <p className='main-title'>DS AZUR DRIVER</p>
@@ -25,7 +27,7 @@ const Navbar = (props) => {
                     <ul>
                         <li onMouseOver={setUnderline}
                             onMouseLeave={unsetUnderline}>
-                                <Link href='/'>
+                                <Link href='/#acceuil'>
                                     <a>Accueil</a>
                                 </Link>
                         </li>
