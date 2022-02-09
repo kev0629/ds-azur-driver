@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 import Image from 'next/image';
 import logo from '../public/Images/logo_white.png';
 import Flags from 'country-flag-icons/react/3x2'
@@ -23,13 +24,31 @@ const Navbar = (props) => {
                 <div className='nav'>
                     <ul>
                         <li onMouseOver={setUnderline}
-                            onMouseLeave={unsetUnderline}>Acceuil</li>
+                            onMouseLeave={unsetUnderline}>
+                                <Link href='/'>
+                                    <a>Accueil</a>
+                                </Link>
+                        </li>
                         <li onMouseOver={setUnderline}
-                            onMouseLeave={unsetUnderline}>Prestation</li>
+                            onMouseLeave={unsetUnderline}>
+                                <Link href='/#prestation'>
+                                    <a>Prestation</a>
+                                </Link>
+                                
+                        </li>
                         <li onMouseOver={setUnderline}
-                            onMouseLeave={unsetUnderline}>Réservation</li>
+                            onMouseLeave={unsetUnderline}>
+                                <Link href='/#reservation'>
+                                    <a>Réservation</a>
+                                </Link>
+                                
+                        </li>
                         <li onMouseOver={setUnderline}
-                            onMouseLeave={unsetUnderline}>Contact</li>
+                            onMouseLeave={unsetUnderline}>
+                                <Link href='/#contact'>
+                                    <a>Contact</a>
+                                </Link>
+                        </li>
                     </ul>
                 </div>
                 {/* <div className='flags'>

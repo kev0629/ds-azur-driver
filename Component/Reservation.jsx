@@ -20,13 +20,13 @@ function Reservation() {
         setRotate(r => r+360);
     }, [distance]);
     return (
-            <div className='reservation'>
+            <div className='reservation' id='reservation'>
                 <Image 
                     src={background} 
                     alt='road'
                     placeholder='blur'
                     
-                    className='bg'
+                    className='bg bg-reservation'
                     layout="responsive"
                 width={1440}
                 height={850}/>

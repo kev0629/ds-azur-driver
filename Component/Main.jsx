@@ -5,7 +5,7 @@ import { motion } from "framer-motion"
 
 const Main = () => {
     return (
-        <div className="home">
+        <div className="home" id='acceuil'>
                 <Image src={bg} 
                 alt='Lexus'
                 className='bg-main' 
