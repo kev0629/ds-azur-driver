@@ -20,7 +20,7 @@ function Reservation() {
         setRotate(r => r+360);
     }, [distance]);
     return (
-            <div className='reservation' id='reservation'>
+            <section className='reservation' id='reservation'>
                 <Image 
                     src={background} 
                     alt='road'
@@ -109,7 +109,7 @@ function Reservation() {
                             </div>
                         </LoadScript>
                     </div>
-        </div>
+        </section>
     )
 }
 

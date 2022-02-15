@@ -8,7 +8,7 @@ import presentation4 from './../public/Images/presentation.png'
 
 function Prestation() {
     return (
-        <div className='prestation' id='prestation'>
+        <section className='prestation' id='prestation'>
             <div className="prestation-grid">
                 <div className="div1 prestation-title">
                     <TittleSection mainTitle='quelque soit vos besoins' secondaryTitle='Nos prestations sur mesure' />
@@ -78,7 +78,7 @@ function Prestation() {
                     
                 </div>
             </div>
-        </div>
+        </section>
     )
 }
 

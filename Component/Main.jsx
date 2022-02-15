@@ -5,7 +5,7 @@ import { motion } from "framer-motion"
 
 const Main = () => {
     return (
-        <div className="home" id='acceuil'>
+        <section className="home" id='acceuil'>
                 <Image src={bg} 
                 alt='Lexus'
                 className='bg-main' 
@@ -16,7 +16,7 @@ const Main = () => {
                 />
                 <h1 className='slogan beba-font'>Laissez-vous conduire.</h1>
                 <motion.button whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} className='play-fair-font contact-button'>CONTACT</motion.button>
-        </div>
+        </section>
     );
 }
 

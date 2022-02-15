@@ -4,7 +4,7 @@ import Image from 'next/image';
 import frenchRiviera from '../public/Images/french_riviera.jpg'
 const Contact = () => {
     return (
-        <div className='contact' id='contact'>
+        <section className='contact' id='contact'>
             <Image
                 className='bg'
                 alt="French Riviera"
@@ -49,7 +49,7 @@ const Contact = () => {
 
                 </div>
             </div>
-       </div> 
+       </section> 
     );
 }
 
