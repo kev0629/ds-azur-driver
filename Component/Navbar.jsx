@@ -1,6 +1,6 @@
 import React from 'react';
-import Link from 'next/link';
 import Image from 'next/image';
+import Route from './Route';
 import logo from '../public/Images/logo_white.png';
 import Flags from 'country-flag-icons/react/3x2'
 
@@ -15,9 +15,9 @@ const Navbar = (props) => {
         <div>
             <nav className="navbar">
                 <div className='logo-section'>
-                    <Link href='/#acceuil'>
+                    <Route to='acceuil' link='/#acceuil' nav={false}>
                         <a><Image src={logo} width={894/9} height={383/9} className='logo' alt="logo" /></a>
-                    </Link>
+                    </Route>
                 </div>
                 <div className='title'>
                     <p className='main-title'>DS AZUR DRIVER</p>
@@ -25,31 +25,27 @@ const Navbar = (props) => {
                 </div>
                 <div className='nav'>
                     <ul>
-                        <li onMouseOver={setUnderline}
-                            onMouseLeave={unsetUnderline}>
-                                <Link href='/#acceuil'>
-                                    <a>Accueil</a>
-                                </Link>
+                        <li>
+                            <Route to='acceuil' link='/#acceuil' nav={true}>
+                                <a>Accueil</a>
+                            </Route>
                         </li>
-                        <li onMouseOver={setUnderline}
-                            onMouseLeave={unsetUnderline}>
-                                <Link href='/#prestation'>
-                                    <a>Prestation</a>
-                                </Link>
+                        <li>
+                            <Route to='prestation' link='/#prestation' nav={true}>
+                                <a>Prestation</a>
+                            </Route>
                                 
                         </li>
-                        <li onMouseOver={setUnderline}
-                            onMouseLeave={unsetUnderline}>
-                                <Link href='/#reservation'>
-                                    <a>Réservation</a>
-                                </Link>
+                        <li>
+                            <Route to='reservation' link='/#reservation' nav={true}>
+                                <a>Réservation</a>
+                            </Route>
                                 
                         </li>
-                        <li onMouseOver={setUnderline}
-                            onMouseLeave={unsetUnderline}>
-                                <Link href='/#contact'>
-                                    <a>Contact</a>
-                                </Link>
+                        <li>
+                            <Route to='contact' link='/#contact' nav={true}>
+                                <a>Contact</a>
+                            </Route>
                         </li>
                     </ul>
                 </div>

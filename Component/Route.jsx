@@ -15,9 +15,9 @@ export default function Route(props){
                         hashSpy={props.nav===true?true:false}
                         smooth={true}
                         duration={500} 
-                        // className={props.nav===true?'nav-title':''}
-                        // activeClass={props.nav===true?'active':''}
-                        offset={-150}>    
+                        className={props.nav===true?'nav-title':''}
+                        activeClass={props.nav===true?'nav-active':''}
+                        offset={-85}>    
                 {props.children}
             </ScrollLink>
         ):(
