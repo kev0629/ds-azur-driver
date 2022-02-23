@@ -74,6 +74,10 @@ a {
 .nav-active{
   text-decoration: underline;
 }
+
+.nav-title{
+  cursor: pointer;
+}
 .nav>ul{
   margin-block-start: 0;
   margin-block-end: 0;

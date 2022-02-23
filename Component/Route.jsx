@@ -9,7 +9,6 @@ export default function Route(props){
     }
     return(
         <>
-        {router.asPath=='/'?(
             <ScrollLink to={props.to}
                         spy={props.nav===true?true:false}
                         hashSpy={props.nav===true?true:false}
@@ -20,11 +19,6 @@ export default function Route(props){
                         offset={-85}>    
                 {props.children}
             </ScrollLink>
-        ):(
-        <Link href={props.link}>
-            <a>{props.children}</a>
-        </Link>
-        )}
         </>
     )
 }
