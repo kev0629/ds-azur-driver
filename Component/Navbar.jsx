@@ -16,7 +16,7 @@ const Navbar = (props) => {
             <nav className="navbar">
                 <div className='logo-section'>
                     <Route to='acceuil' link='/#acceuil' nav={false}>
-                        <a><Image src={logo} width={894/9} height={383/9} className='logo' alt="logo" /></a>
+                        <a><Image src={logo} width={894/9} height={383/9} className='logo' alt="logo"  /></a>
                     </Route>
                 </div>
                 <div className='title'>

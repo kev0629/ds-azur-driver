@@ -10,10 +10,6 @@ body {
   font-family: 'Playfair Display', serif;
   font-weight: 400;
   background: #000;
-  /* scroll-behavior: smooth;
-  scroll-padding-top: 85px; */
-  /* font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif; */
 }
 
 .beba-font{
@@ -400,3 +396,30 @@ p.result-quot{
   align-items: center;
 }
 
+@media screen and (max-width: 1175px) { /* Little screen */
+.nav>ul>li{
+  padding-left: 10px;
+  padding-right: 10px;
+  }
+  .input{
+    width: 500px;
+  }
+  .icon-search{
+    left: 450px;
+  }
+}
+
+
+@media screen and (max-width: 1024px) { /* Tablet Large */
+
+
+}
+
+@media screen and (max-width: 768px) { /* Tablet */
+  
+}
+
+@media screen and (max-width: 640px) { /* Phone */
+  
+  
+}
