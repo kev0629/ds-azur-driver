@@ -40,7 +40,8 @@ function Prestation() {
                     <br />
                     <p className='prestations-list-title beba-font'>MISE À DISPOSITION : </p>
                     <p className='prestations-list-text'>nous contacter pour plus d’informations.</p> 
-
+                    <br />
+                    
                 </div>
             </div>
             <div className="prestation-grid-bottom">
