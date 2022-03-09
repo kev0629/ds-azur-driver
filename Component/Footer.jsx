@@ -11,7 +11,7 @@ export default function Footer() {
                 M David Saffioti <br />
                 Adresse : 30 traverse des Cades 06370 Mouans Sartoux <br />
                 Tel : 06 08 07 08 73 <br />
-                Email :  .... <br />
+                Email :  david.saffioti@ds-azurdriver.fr <br />
                 Site réalisé et géré par KS Project <br />
                 Hébergement chez .... <br />
 
@@ -22,7 +22,7 @@ export default function Footer() {
                     <br/>
                     Adresse : 30 traverse des Cades 06370 Mouans Sartoux <br />
                     Tel : 06 08 07 08 73 <br />
-                    Email :  .... <br />
+                    Email :  david.saffioti@ds-azurdriver.fr <br />
                     <BsFacebook className='icon'/>
                     <BsInstagram className='icon'/>
                     <BsLinkedin className='icon'/>

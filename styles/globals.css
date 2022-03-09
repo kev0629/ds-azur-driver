@@ -38,7 +38,7 @@ a {
   width: auto;
   color: #fff;
   font-size: 18px;
-  z-index: 1;
+  z-index: 10;
   position: fixed;
   width: 100%;
 }
@@ -226,8 +226,10 @@ h1.slogan{
 }
 
 .reservation{
-  position: relative;
-  height: auto;
+  background-image: url('../public/Images/road.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .reservation-section {
@@ -235,7 +237,7 @@ h1.slogan{
   width: 100%; 
   height: 100%;
   top:0;
-  position: absolute; 
+  position: relative; 
   padding: 50px;
 display: grid; 
 grid-template-columns: repeat(12, 1fr); 
@@ -249,8 +251,8 @@ grid-row-gap: 10px;
 .drop-off { grid-area: 3 / 3 / 4 / 9; } 
 .date-time { grid-area: 2 / 10 / 3 / 12; } 
 .options { grid-area: 3 / 10 / 4 / 12; } 
-.val-km { grid-area: 4 / 4 / 4 / 7; } 
-.val-eur { grid-area: 4 / 7 / 4 / 10; }
+.val-km { grid-area: 4 / 4 / 6 / 7; } 
+.val-eur { grid-area: 4 / 7 / 6 / 10; }
 
 .input{
   background: #333333;
@@ -305,16 +307,21 @@ p.result-quot{
 }
 
 .contact{
-  position: relative;
-  height: auto;
+  /* position: relative;
+  height: auto; */
+  /* padding: 50px; */
+  /* background-color: #000; */
+  background-image: url('../public/Images/french_riviera.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
-/* .bg{
-  position: absolute;
-} */
+.bg{
+  z-index:0
+}
+
 .contact-section{
-  position: absolute;
-  top: 0;
+  position: relative;
   display: grid; 
   grid-template-columns: repeat(12, 1fr); 
   grid-template-rows: 1fr; 
@@ -322,37 +329,49 @@ p.result-quot{
   grid-row-gap: 0px;
   width: 100%;
   height: 100%;
+  z-index: 1;
 }
 
 .contact-left { 
   grid-area: 1 / 1 / 2 / 7;
 }
+
 .contact-title{
+  padding: 30px;
   color: #000;
-  width: 385px;
-  padding-left: 70px;
+  width: auto;
+  max-width: 350px;
 }
 .contact-title>.prestation-border{
   background: #000;
 }
 .contact-right {
-  position: absolute; 
-  grid-area: 1 / 7 / 2 / 13;
+  /* position: absolute;  */
+  grid-area: 1 / 7 / 5 / 13;
   background-color: #333333;
   opacity: 0.9;
   font-size: 18px;
   line-height: 34px;
-  max-height: 600px;
+  /*max-height: 600px; */
+  z-index: 0;
  }
  
  .contact-card{
   top: 40%;
   left: 5%;
-  width: 546px;
-  height: 258px;
+  width: 60%;
+  height: auto;
   background: rgba(51, 51, 51, 0.9);
   border-radius: 30px;
   margin: 100px auto;
+  padding: 10px;
+ }
+
+ .profile-pic{
+   margin: auto;
+   position: absolute;
+   top: 30%;
+   left: 5%;
  }
 
  .contact-card-content{
@@ -384,22 +403,7 @@ p.result-quot{
   line-height: 33px;  
   letter-spacing: 0.1px;
 }
-.bgWrap {
-  position: fixed;
-  height: 100px;
-  width: 100px;
-  overflow: hidden;
-  z-index: -1;
-}
 
-.bgText {
-  margin: 0;
-  font-size: 2rem;
-  line-height: 3rem;
-  text-align: center;
-  padding-top: 40vh;
-  text-shadow: 1px 1px 1px #3c5c5e;
-}
 .icon{
   margin-top: 50px;
   height: 30px;
@@ -427,8 +431,8 @@ p.result-quot{
   .contact-card{
     /* width: 546px;
     height: 258px; */
-    width: 80%;
-    height: 30%;
+    width: 60%;
+    height: auto;
   }
   .contact-right{
     font-size: 15px;

@@ -21,12 +21,7 @@ function Reservation() {
     }, [distance]);
     return (
             <section className='reservation' id='reservation'>
-                <Image 
-                    src={background} 
-                    alt='road'
-                    placeholder='blur'
-                    className='bg bg-reservation'
-                />
+                
                     <div className="reservation-section">
                         <div className="title">
                             <TittleSection mainTitle='Réservation' secondaryTitle='Votre devis sur mesure' />
