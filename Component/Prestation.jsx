@@ -9,11 +9,11 @@ import presentation4 from './../public/Images/presentation.png'
 function Prestation() {
     return (
         <section className='prestation' id='prestation'>
-            <div className="prestation-grid">
-                <div className="div1 prestation-title">
+            <div className="prestation-grid-top">
+                <div className="presta-top-left prestation-title">
                     <TittleSection mainTitle='quelque soit vos besoins' secondaryTitle='Nos prestations sur mesure' />
                 </div>
-                <div className="div2 prestations-list">
+                <div className="presta-top-right prestations-list">
                     <p className='prestations-list-title beba-font'>TRAJETS TOUTES DISTANCES : </p>
                     <p className='prestations-list-text'>vous rendre dans la ville voisine, à l’autre bout du pays ou à l’étranger.</p>
                     <br />
@@ -42,7 +42,9 @@ function Prestation() {
                     <p className='prestations-list-text'>nous contacter pour plus d’informations.</p> 
 
                 </div>
-                <div className="div3 card">
+            </div>
+            <div className="prestation-grid-bottom">
+                <div className="first-card card">
                     <Image src={presentation1} placeholder="blur" alt='presentation'layout='responsive' />
                     <div className='card-text'>
                         <p className='beba-font'>SÉCURITÉ ET DISCRÉTION</p>
@@ -51,7 +53,7 @@ function Prestation() {
                     </div>
                     
                 </div>
-                <div className="div4 card">
+                <div className="second-card card">
                     <Image src={presentation2} placeholder="blur" alt='presentation' layout='responsive' />
                     <div className='card-text'>
                         <p className='beba-font'>SERVICE DE QUALITÉ</p>
@@ -60,7 +62,7 @@ function Prestation() {
                     </div>
                     
                 </div>
-                <div className="div5 card">
+                <div className="third-card card">
                 <Image src={presentation3} placeholder="blur" alt='presentation' layout='responsive' />
                     <div className='card-text'>
                         <p className='beba-font'>PONCTUALITÉ ET CONFORT</p>
@@ -68,7 +70,7 @@ function Prestation() {
                         <p className='text-card'>Voyagez à bord de véhicules luxueux avec de nombreux services.</p>
                     </div>
                 </div>
-                <div className="div6 card">
+                <div className="fourth-card card">
                 <Image src={presentation4}  placeholder="blur" alt='presentation' layout='responsive' />
                     <div className='card-text'>
                         <p className='beba-font'>TRANSPARANCE ET SIMPLICITÉ</p>

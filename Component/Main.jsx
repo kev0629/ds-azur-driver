@@ -11,7 +11,7 @@ const Main = () => {
                 alt='Lexus'
                 className='bg-main' 
                 placeholder='blur'
-                layout='fill'
+                layout='responsive'
                 // width={1440}
                 // height={787}
                 />

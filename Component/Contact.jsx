@@ -13,6 +13,7 @@ const Contact = () => {
                 placeholder='blur'
                 width={1440}
                 height={600}
+
             />  
              <div className='contact-section'>
                 <div className='contact-left'>

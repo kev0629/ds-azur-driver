@@ -25,11 +25,8 @@ function Reservation() {
                     src={background} 
                     alt='road'
                     placeholder='blur'
-                    
                     className='bg bg-reservation'
-                    layout="responsive"
-                width={1440}
-                height={850}/>
+                />
                     <div className="reservation-section">
                         <div className="title">
                             <TittleSection mainTitle='Réservation' secondaryTitle='Votre devis sur mesure' />
