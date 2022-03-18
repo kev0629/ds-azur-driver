@@ -1,6 +1,8 @@
 import React from 'react';
+import Link from 'next/link'
 import TittleSection from '../Component/TittleSection'
 import Image from 'next/image';
+import {HiOutlineMail, HiOutlinePhone} from 'react-icons/hi';
 import frenchRiviera from '../public/Images/french_riviera.jpg'
 import profile_pic from '../public/Images/Ellipse_DS.png'
 const Contact = () => {
@@ -24,7 +26,12 @@ const Contact = () => {
                         <div className='contact-card-content'>
                             <p className='beba-font' style={{fontSize: 40, margin:0}}>DAVID SAFFIOTI</p> 
                             <p style={{fontSize: 25, margin:0}}>Chauffeur Privé</p>
-                            <p className='infos-contact'><a href="david.saffioti@dsazurdriver.fr">david.saffioti@dsazurdriver.fr</a> <a href="tel:+330608070873">06.08.07.08.73</a></p>
+                            <p className='infos-contact'>
+                            <HiOutlineMail/>
+                                <Link href="mailto:david.saffioti@dsazurdriver.fr">
+                                        david.saffioti@dsazurdriver.fr
+                                </Link>
+                                 <HiOutlinePhone/><a href="tel:+330608070873">06.08.07.08.73</a></p>
                             <p>Course uniquement sur réservation</p>
                         </div>
                     </div>

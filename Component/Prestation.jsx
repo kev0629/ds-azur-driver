@@ -4,6 +4,7 @@ import {motion, AnimatePresence} from 'framer-motion'
 import TittleSection from './TittleSection'
 import Carousel from 'react-elastic-carousel'
 import Image from 'next/image'
+import { HiOutlineChevronUp,HiOutlineChevronDown} from 'react-icons/hi'
 import presentation1 from './../public/Images/presentation.png'
 import presentation2 from './../public/Images/presentation.png'
 import presentation3 from './../public/Images/presentation.png'
@@ -41,12 +42,12 @@ function Prestation() {
                     <TittleSection mainTitle='quelque soit vos besoins' secondaryTitle='Nos prestations sur mesure' />
                 </div>
                 <div className="presta-top-right">
-                    <motion.div className="prestations-list">
-                        {handelList&&<PrestaListContent handelList={handelList} animate={'hidden'} setHandelList={setHandelList} />}
+                    <motion.div className="prestations-list" transition={{ duration: 2 }}>
+                        <PrestaListContent handelList={handelList} setHandelList={setHandelList} />
                         <motion.div 
                         onClick={() => setHandelList(!handelList)} 
                         style={{textAlign:'center'}}>
-                            {handelList?'Replier la liste des prestations':'Dérouller la liste des prestations'}
+                            {handelList?<HiOutlineChevronUp/>:<HiOutlineChevronDown/> }
                         </motion.div>
                     </motion.div>
                 </div>
@@ -66,35 +67,39 @@ function Prestation() {
 
 function PrestaListContent(props){
     return(
-        <motion.div animate={props.animate}>
-            <p className='prestations-list-title beba-font'>TRAJETS TOUTES DISTANCES : </p>
-            <p className='prestations-list-text'>vous rendre dans la ville voisine, à l’autre bout du pays ou à l’étranger.</p>
-            <br />
-            <br />
-            <p className='prestations-list-title beba-font'>FORFAITS AÉROPORTS : </p>
-            <p className='prestations-list-text'>vous arrivez à l’aéroport et vous avez un rendez-vous privé ou professionel à honorer. Nice, Mandelieu, Hyères, Marseille, Monaco...</p> 
-            <br />
-            <br />
-            <p className='prestations-list-title beba-font'>FORFAITS GARES : </p>
-            <p className='prestations-list-text'> vous arrivez en gare et vous avez un rendez-vous privé ou professionel à honorer.</p>
-            <br />
-            <br />
-            <p className='prestations-list-title beba-font'>BUSINESS : </p>
-            <p className='prestations-list-text'>déplacez-vous en toute tranquilité pour vos rendez-vous, reunions, séminaires ...</p> 
-            <br />
-            <br />
-            <p className='prestations-list-title beba-font'>ORFAITS MARIAGES/ ÉVÈNEMENTS: </p>
-            <p className='prestations-list-text'>profitez de votre évènement, notre chauffeur s’occupe des transferts pour vous et vos convives.</p> 
-            <br />
-            <br />
-            <p className='prestations-list-title beba-font'>TOURISME: </p>
-            <p className='prestations-list-text'>venez visiter, nous créons des circuits touristiques sur mesure pour vos envies.</p> 
-            <br />
-            <br />
-            <p className='prestations-list-title beba-font'>MISE À DISPOSITION : </p>
-            <p className='prestations-list-text'>nous contacter pour plus d’informations.</p> 
-            <br />
-        </motion.div>
+        <AnimatePresence >
+            {props.handelList&&(
+                <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
+                    <p className='prestations-list-title beba-font'>TRAJETS TOUTES DISTANCES : </p>
+                    <p className='prestations-list-text'>vous rendre dans la ville voisine, à l’autre bout du pays ou à l’étranger.</p>
+                    <br />
+                    <br />
+                    <p className='prestations-list-title beba-font'>FORFAITS AÉROPORTS : </p>
+                    <p className='prestations-list-text'>vous arrivez à l’aéroport et vous avez un rendez-vous privé ou professionel à honorer. Nice, Mandelieu, Hyères, Marseille, Monaco...</p> 
+                    <br />
+                    <br />
+                    <p className='prestations-list-title beba-font'>FORFAITS GARES : </p>
+                    <p className='prestations-list-text'> vous arrivez en gare et vous avez un rendez-vous privé ou professionel à honorer.</p>
+                    <br />
+                    <br />
+                    <p className='prestations-list-title beba-font'>BUSINESS : </p>
+                    <p className='prestations-list-text'>déplacez-vous en toute tranquilité pour vos rendez-vous, reunions, séminaires ...</p> 
+                    <br />
+                    <br />
+                    <p className='prestations-list-title beba-font'>ORFAITS MARIAGES/ ÉVÈNEMENTS: </p>
+                    <p className='prestations-list-text'>profitez de votre évènement, notre chauffeur s’occupe des transferts pour vous et vos convives.</p> 
+                    <br />
+                    <br />
+                    <p className='prestations-list-title beba-font'>TOURISME: </p>
+                    <p className='prestations-list-text'>venez visiter, nous créons des circuits touristiques sur mesure pour vos envies.</p> 
+                    <br />
+                    <br />
+                    <p className='prestations-list-title beba-font'>MISE À DISPOSITION : </p>
+                    <p className='prestations-list-text'>nous contacter pour plus d’informations.</p> 
+                    <br />
+                </motion.div>
+            )}
+        </AnimatePresence>
         
     )
 
