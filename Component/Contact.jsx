@@ -24,7 +24,7 @@ const Contact = () => {
                         <div className='contact-card-content'>
                             <p className='beba-font' style={{fontSize: 40, margin:0}}>DAVID SAFFIOTI</p> 
                             <p style={{fontSize: 25, margin:0}}>Chauffeur Privé</p>
-                            <p className='infos-contact'>david.saffioti@ds-azurdriver.fr 06.08.07.08.73</p>
+                            <p className='infos-contact'><a href="david.saffioti@dsazurdriver.fr">david.saffioti@dsazurdriver.fr</a> <a href="tel:+330608070873">06.08.07.08.73</a></p>
                             <p>Course uniquement sur réservation</p>
                         </div>
                     </div>
