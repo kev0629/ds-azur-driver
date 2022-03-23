@@ -1,16 +1,16 @@
-import React from 'react';
+import React, {useState} from 'react';
 import Image from 'next/image';
 import Route from './Route';
+import {IoMdMenu,IoMdClose} from 'react-icons/io';
 import logo from '../public/Images/logo_white.png';
 import Flags from 'country-flag-icons/react/3x2'
 
 const Navbar = (props) => {
-    function setUnderline(e) {
-        e.target.style.textDecoration = 'underline';
-    }
-    function unsetUnderline(e) {
-        e.target.style.textDecoration = 'none';
-    }
+    
+    const [handelBurger, setHandelBurger] = useState(true);
+
+
+
     return (
         <div>
             <nav className="navbar">
@@ -22,6 +22,11 @@ const Navbar = (props) => {
                 <div className='title'>
                     <p className='main-title'>DS AZUR DRIVER</p>
                     <p className='secondary-title'>by David Saffioti</p>
+                </div>
+                <div className='nav-burger'>
+                    {handelBurger?
+                    <IoMdMenu onClick={() => setHandelBurger(!handelBurger)} />
+                    :<IoMdClose onClick={() => setHandelBurger(!handelBurger)} />}
                 </div>
                 <div className='nav'>
                     <ul>

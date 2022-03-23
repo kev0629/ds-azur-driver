@@ -65,6 +65,15 @@ a {
   margin: 0;
   text-align: right;
 }
+
+.nav-burger{
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 10px;
+  cursor: pointer;
+}
 .nav{
   display: inline-block;
   width: auto;
@@ -463,6 +472,23 @@ p.result-quot{
 
 @media screen and (max-width: 1024px) { /* Tablet horizontal */
 
+
+}
+
+@media screen and (max-width: 960px) { /*Nav title and menu touching */
+
+  .nav-burger{
+    display: inline-block;
+    margin-right: 50px;
+    
+  }
+  .nav-burger>svg{
+    width: 75px;
+    height: 75px;
+  }
+  .nav{
+    display: none;
+  }
 
 }
 
