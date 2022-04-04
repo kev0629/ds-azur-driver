@@ -5,39 +5,27 @@ import { motion } from "framer-motion"
 import {IoMdMenu,IoMdClose} from 'react-icons/io';
 import logo from '../public/Images/logo_white.png';
 import Flags from 'country-flag-icons/react/3x2'
-import useDimension from '../Hook/useDimension';
+import useDimension from '../Hooks/useDimension';
 
 const Navbar = (props) => {
 
     const browserWidth = useDimension();
     
-    const [handelBurger, setHandelBurger] = useState(true);
+    const [handelBurger, setHandelBurger] = useState(false);
 
     const nav_actions = {
-        visible:{display:'Block'},
-        hidden:{display:'None'}
+        visible:{display:'block', y:0},
+        hidden:{display:'none',y:'-100%'}
     }
 
-    const variants = {
-        visible: { opacity: 1,
-                    transition: {
-                        delayChildren: 0.5,
-                        staggerDirection: -1
-                        
-                    } },
-        hidden: { opacity: 0,},
-      }
-      const item = {
-        hidden: { opacity: 0 },
-        show: { opacity: 1 }
-      }      
+    
 
     return (
-        <div>
+        <>
             <nav className="navbar">
                 <div className='logo-section'>
                     <Route to='acceuil' link='/#acceuil' nav={false}>
-                        <a><Image src={logo} width={894/9} height={383/9} className='logo' alt="logo"  /></a>
+                        <Image src={logo} width={894/9} height={383/9} className='logo' alt="logo"  />
                     </Route>
                 </div>
                 <div className='title'>
@@ -45,42 +33,46 @@ const Navbar = (props) => {
                     <p className='secondary-title'>by David Saffioti</p>
                 </div>
                 <div className='nav-burger'>
-                    {handelBurger?
-                    <IoMdMenu onClick={() => (setHandelBurger(false) )} />
-                    :<IoMdClose onClick={() => setHandelBurger(true)} />}
+                    {browserWidth<960 && handelBurger?
+                    <IoMdClose onClick={() => setHandelBurger(false)} />
+                    :<IoMdMenu onClick={() => (setHandelBurger(true) )} />} 
                 </div>
-                {console.log(browserWidth)}
-                <motion.div initial="hidden" animate={handelBurger? "hidden":"visible"} variants={nav_actions} className='nav' >
+                <motion.div  className='nav' initial="visible" animate={handelBurger|| browserWidth>960? "visible":"hidden"} variants={nav_actions} >
+                    {/* initial="visible" animate={handelBurger? "hidden":"visible"} variants={nav_actions} */}
                     <motion.ul 
-                        initial="hidden"
-                        animate={handelBurger ? "hidden" : "visible"}
-                        variants={variants}>
-                        <motion.li variants={handelBurger ? "show" : "hidden"}>
+                        // initial="hidden"
+                        // animate="visible"
+                        // variants={container}
+                        >
+                        <motion.li >
                             <Route to='acceuil' link='/#acceuil' nav={true}>
-                                <a>Accueil</a>
+                                <div onClick={() => setHandelBurger(false)} style={{display:'inline-block'}}>Accueil</div>
                             </Route>
                         </motion.li>
-                        <motion.li variants={handelBurger ? "show" : "hidden"}>
+                        <motion.li    
+                        >
                             <Route to='prestation' link='/#prestation' nav={true}>
-                                <a>Prestation</a>
+                            <div onClick={() => setHandelBurger(false)} style={{display:'inline-block'}}>Prestation</div>
                             </Route>
                                 
                         </motion.li>
-                        <motion.li variants={handelBurger ? "show" : "hidden"}>
-                            <Route to='reservation' link='/#reservation' nav={true}>
-                                <a>Réservation</a>
+                        <motion.li
+                        >
+                            <Route to='reservation' link='/#reservation' nav={true} >
+                            <div onClick={() => setHandelBurger(false)} style={{display:'inline-block'}}>Réservation</div>
                             </Route>
                                 
                         </motion.li>
-                        <motion.li variants={handelBurger ? "show" : "hidden"} >
+                        <motion.li 
+                        >
                             <Route to='contact' link='/#contact' nav={true}>
-                                <a>Contact</a>
+                            <div onClick={() => setHandelBurger(false)} style={{display:'inline-block'}}>Contact</div>
                             </Route>
                         </motion.li>
                     </motion.ul>
                 </motion.div>
             </nav>
-        </div>
+        </>
     );
 }
 

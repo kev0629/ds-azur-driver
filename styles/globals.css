@@ -127,7 +127,8 @@ h1.slogan{
   bottom: 100px;
   margin: 0;
   font-weight: 400;
-  font-size: 110px;
+  font-size: 10vw;
+  padding-left: 20px;
 }
 
 .contact-button{
@@ -487,7 +488,7 @@ p.result-quot{
     height: 75px;
   }
   .nav{
-    display: None;
+    display: block;
     position: relative;
     right: auto;
     width: 100%;
@@ -504,8 +505,37 @@ p.result-quot{
 
   }
 
+  .prestation-grid-top { 
+    display: block; 
+  }
+
+  .reservation-section {
+  padding: 20px;
+  width: 100%; 
+  height: 100%;
+  top:0;
+  position: relative; 
+  padding: 50px;
+display: grid; 
+grid-template-columns: repeat(12, 1fr); 
+grid-template-rows: repeat(6, 1fr); 
+grid-column-gap: 10px;
+grid-row-gap: 10px; 
+}
+.title { grid-area: 1 / 1 / 2 / 12; } 
+.res-icons { grid-area: 2 / 2 / 4 / 3; } 
+.pick-up { grid-area: 3 / 3 / 4 / 9; } 
+.drop-off { grid-area: 4 / 3 / 5 / 9; } 
+.date-time { grid-area: 2 / 5 / 3 / 7; } 
+.options { grid-area: 3 / 10 / 4 / 12; } 
+.val-km { grid-area: 5 / 4 / 7 / 7; } 
+.val-eur { grid-area: 5 / 7 / 7 / 10; }
+
+.contact-section{
+  display: block;
 }
 
+}
 
 
 @media screen and (max-width: 768px) { /* Tablet */
@@ -513,6 +543,7 @@ p.result-quot{
 }
 
 @media screen and (max-width: 640px) { /* Phone */
-  
-  
+ .input{
+   width: 80%;
+ } 
 }

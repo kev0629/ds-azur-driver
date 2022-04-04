@@ -74,7 +74,7 @@ function Reservation() {
                         <LoadScript
                             googleMapsApiKey={process.env.NEXT_PUBLIC_GOOGLE_MAP_API_KEY}
                             libraries={libraries}>
-                            {pickUp&&dropOff?<DistanceMatrixService
+                            {pickUp&&dropOff&&<DistanceMatrixService
                             options={{
                                         origins: [pickUp],
                                         destinations: [dropOff],
@@ -86,7 +86,7 @@ function Reservation() {
                                 }
                             }
                             }
-                            />:console.log("No enouth data")}
+                            />}
                             <div className="result val-km">
                                 <motion.div  animate={{ rotate: rotate }} transition={{ duration: 1 }}> 
                                     <Image src={weel} width={315} alt='distance' height={315} layout="responsive"/>
