@@ -1,12 +1,18 @@
-import React,{ useState, useEffect } from 'react';
-import Autocomplete from "react-google-autocomplete";
-import {LoadScript, DistanceMatrixService } from "@react-google-maps/api";
+import React,{ useState, useEffect, useRef } from 'react';
+// import Autocomplete from "react-google-autocomplete";
+import { useLoadScript, Autocomplete, DistanceMatrixService, LoadScript } from "@react-google-maps/api";
 import TittleSection from './TittleSection'
 import Image from 'next/image';
 import weel from '../public/Images/Roue.svg'
 import loupe from '../public/Images/loupe.svg'
 import background from '../public/Images/road.jpg'
 import { motion, useAnimation } from "framer-motion"
+import InputAutocomplete from './InputAutocomplete';
+
+const scriptOptions = {
+    googleMapsApiKey: process.env.NEXT_PUBLIC_GOOGLE_MAP_API_KEY,
+    libraries: ['places'],
+  }
 
 function Reservation() {
     const [pickUp, setPickUp] = useState(null);
@@ -19,6 +25,40 @@ function Reservation() {
     useEffect(() => {
         setRotate(r => r+360);
     }, [distance]);
+
+
+    // const { isLoaded, loadError } = useLoadScript(scriptOptions)
+    // const [autocomplete, setAutocomplete] = useState(null)
+    // const inputEl = useRef(null)
+
+    // const onKeypress = (e) => {
+    //     if (e.key === 'Enter') {
+    //     e.preventDefault()
+    //     return false
+    //     }
+    // }
+
+
+
+    // const onLoad = (autocompleteObj) => {
+    //     setAutocomplete(autocompleteObj)
+    // }
+
+    // const onDropOffChange = (e) => {
+    //     if (autocomplete) {
+    //     const place = autocomplete.getPlace()
+    //     console.log(e)
+    //     }
+    // }
+
+    // const onPickUpChange = (e) => {
+    //     if (autocomplete) {
+    //     const place = autocomplete.getPlace()
+    //     console.log(place)
+    //     }
+    // }
+
+
     return (
             <section className='reservation' id='reservation'>
                 
@@ -28,7 +68,7 @@ function Reservation() {
                         </div> 
                         <div className="res-icons">
                         </div> 
-                        <div className="pick-up">
+                        {/* <div className="pick-up">
                             <Autocomplete
                                 className='input play-fair-font'
                                 apiKey={process.env.NEXT_PUBLIC_GOOGLE_MAP_API_KEY}
@@ -42,11 +82,12 @@ function Reservation() {
                                     componentRestrictions: { country: "fr" },
                                 }}
                                 />
+                                <>
                             <div className="icon-search">
                                 <Image src={loupe} alt='search' layout="responsive" />
                             </div>
-                        </div> 
-                        <div className="drop-off">
+                        </div>  */}
+                        {/* <div className="drop-off">
                             <Autocomplete
                                     className='input play-fair-font'
                                     apiKey={process.env.NEXT_PUBLIC_GOOGLE_MAP_API_KEY}
@@ -63,11 +104,29 @@ function Reservation() {
                             <div className="icon-search">
                                 <Image src={loupe} alt='search' />
                             </div>
-                        </div> 
+                        </div>  */}
+                        <div className="pick-up">
+                            <InputAutocomplete placeHolder="Choissisez votre point de départ ..." onPlaceSelected={(place) => {
+                                        console.log(place)
+                                        // setPickUp(place.formatted_address)
+                                    }}/>
+                            <div className="icon-search">
+                                <Image src={loupe} alt='search' />
+                            </div>
+                        </div>
+                        <div className="drop-off">
+                            <InputAutocomplete placeHolder="Choissisez votre destination ..." onPlaceSelected={(place) => {
+                                        console.log(place)
+                                        // setDropOff(place.formatted_address)
+                                    }}/>
+                            <div className="icon-search">
+                                <Image src={loupe} alt='search' />
+                            </div>
+                        </div>
                         <div className="date-time">
                             <input type="date" className='input-date play-fair-font' onChange={(e)=>setDate(e.target.value)} />
                             <input type="time" className='input-time play-fair-font' onChange={(e)=>setTime(e.target.value)} />
-                        </div> 
+                        </div>  
                         {/* <div className="options">
                             <button>Options</button>
                         </div> */}
