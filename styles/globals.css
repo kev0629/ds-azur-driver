@@ -282,6 +282,8 @@ grid-row-gap: 10px;
 .val-km { grid-area: 4 / 4 / 6 / 7; } 
 .val-eur { grid-area: 4 / 7 / 6 / 10; }
 
+
+
 .input{
   background: #333333;
   border-radius: 50px;
@@ -321,11 +323,37 @@ p.result-quot{
   position: relative;
   bottom: 180px
 }
+
+
+.elipsefill-res{
+  position: relative;
+  display: inline-block;
+  right: 30px;
+}
+
+.elipse-top{
+  bottom:10px
+}
+
+.elipse-bottom{
+  bottom:140px
+}
+
+.point-res,.elipse-res{
+  position: relative;
+  display: inline-block;
+  bottom: 61px;
+  right: 50px;
+  /* width: 44px; */
+  align-items: center;
+}
+
 .icon-search{
   /* margin: 0; */
+  display: inline-block;
   position: relative;
   bottom: 60px;
-  left: 580px;
+  left: 540px;
   width: 44px;
   align-items: center;
 }
@@ -472,7 +500,23 @@ p.result-quot{
 
 
 @media screen and (max-width: 1024px) { /* Tablet horizontal */
+  p.result-quot{
+    margin: 0;
+    position: relative;
+    bottom: 150px
+  }
 
+  .elipse-top{
+  bottom:30px
+}
+
+.elipse-bottom{
+  bottom:120px
+}
+
+.icon-search{
+  left: 400px;
+}
 
 }
 
@@ -484,8 +528,8 @@ p.result-quot{
     
   }
   .nav-burger>svg{
-    width: 75px;
-    height: 75px;
+    width:50px;
+    height: 50px;
   }
   .nav{
     display: block;
@@ -535,15 +579,59 @@ grid-row-gap: 10px;
   display: block;
 }
 
+.contact-title{
+  max-width: 100%;
+}
+
+p.result-quot{
+  margin: 0;
+  position: relative;
+  bottom: 150px
+}
+
 }
 
 
 @media screen and (max-width: 768px) { /* Tablet */
-  
+  p.result-quot{
+    margin: 0;
+    position: relative;
+    font-size: 24px;
+    bottom: 100px;
+  }
+
+  .reservation-section {
+    padding: 20px;
+    width: 100%; 
+    height: 100%;
+    top:0;
+    position: relative; 
+    padding: 50px;
+  display: grid; 
+  grid-template-columns: repeat(8, 1fr); 
+  grid-template-rows: repeat(6, 1fr); 
+  grid-column-gap: 10px;
+  grid-row-gap: 10px; 
+  }
+  .title { grid-area: 1 / 1 / 2 / 9; } 
+  .pick-up { grid-area: 3 / 2 / 4 / 9; } 
+  .drop-off { grid-area: 4 / 2 / 5 / 9; } 
+  .date-time { grid-area: 2 / 4 / 3 / 6; } 
+  .options { grid-area: 3 / 10 / 4 / 8; } 
+  .val-km { grid-area: 5 / 2 / 7 / 4; } 
+  .val-eur { grid-area: 5 / 6 / 7 / 8; }
+
+  p.result-quot{
+    margin: 0;
+    position: relative;
+    font-size: 24px;
+    bottom: 80px;
+  }
+
 }
 
+
 @media screen and (max-width: 640px) { /* Phone */
- .input{
-   width: 80%;
- } 
+
+ 
 }

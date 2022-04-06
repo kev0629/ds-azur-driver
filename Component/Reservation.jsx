@@ -9,10 +9,9 @@ import background from '../public/Images/road.jpg'
 import { motion, useAnimation } from "framer-motion"
 import InputAutocomplete from './InputAutocomplete';
 
-const scriptOptions = {
-    googleMapsApiKey: process.env.NEXT_PUBLIC_GOOGLE_MAP_API_KEY,
-    libraries: ['places'],
-  }
+import elipse from './../public/Images/Ellipse 1.png'
+import elipseFill from './../public/Images/Ellipse 2.png'
+import point from './../public/Images/Vector.png'
 
 function Reservation() {
     const [pickUp, setPickUp] = useState(null);
@@ -59,17 +58,39 @@ function Reservation() {
                             <TittleSection mainTitle='Réservation' secondaryTitle='Votre devis sur mesure' />
                         </div> 
                         <div className="res-icons">
+                            {/* <div className='elipse-res'>
+                            <Image src={elipse} alt='elipse' />
+                            </div> */}
+                            {/* <div className='elipsefill1-res'>
+                            <Image src={elipseFill} alt='elipse filled' />
+                            </div>
+                            <div className='elipsefill2-res'>
+                            <Image src={elipseFill} alt='elipse filled' />
+                            </div> */}
+                            {/* <div className='point-res'>
+                                <Image src={point} alt='point' />
+                            </div> */}
                         </div> 
                         <div className="pick-up">
                             <InputAutocomplete placeHolder="Choissisez votre point de départ ..." onPlaceChanged={onPickUpChanged} onLoad={onPickUpLoad}/>
-                            
+                            <div className='elipsefill-res elipse-top'>
+                                <Image src={elipseFill} alt='elipse filled' />
+                            </div>
+                            <div className='elipse-res'>
+                                <Image src={elipse} alt='elipse' />
+                            </div>
                             <div className="icon-search">
                                 <Image src={loupe} alt='search' />
                             </div>
                         </div>
                         <div className="drop-off">
-                            
                             <InputAutocomplete placeHolder="Choissisez votre destination ..." onPlaceChanged={onDropOffChanged} onLoad={onDropOffLoad}/>
+                            <div className='elipsefill-res elipse-bottom'>
+                                <Image src={elipseFill} alt='elipse filled' />
+                            </div>
+                            <div className='point-res'>
+                                <Image src={point} alt='point' />
+                            </div>
                             <div className="icon-search">
                                 <Image src={loupe} alt='search' />
                             </div>
