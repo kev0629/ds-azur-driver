@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react'
+import React, { useRef } from 'react'
 import {useLoadScript, Autocomplete} from '@react-google-maps/api'
 
 const scriptOptions = {
@@ -8,7 +8,7 @@ const scriptOptions = {
 
 function InputAutocomplete(props) {
   const { isLoaded, loadError } = useLoadScript(scriptOptions)
-  const [autocomplete, setAutocomplete] = useState(null)
+  // const [autocomplete, setAutocomplete] = useState(null)
   const inputEl = useRef(null)
 
   // Handle the keypress for input
@@ -20,17 +20,7 @@ function InputAutocomplete(props) {
     }
   }
 
-  const onLoad = (autocompleteObj) => {
-    setAutocomplete(autocompleteObj)
-  }
-
-  const onPlaceChanged = (e) => {
-    if (autocomplete) {
-      const place = autocomplete.getPlace()
-      console.log(place)
-    }
-  }
-
+  
   return (
     <>
       { loadError && (
@@ -39,9 +29,9 @@ function InputAutocomplete(props) {
       { isLoaded && (
         <div className="w-full">
           <Autocomplete
-            onLoad={onLoad}
+            onLoad={props.onLoad}
             fields={['all']}
-            onPlaceChanged={props.onPlaceSelected}
+            onPlaceChanged={props.onPlaceChanged}
           >
             <input
               ref={inputEl}
