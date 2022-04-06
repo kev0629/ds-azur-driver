@@ -8,17 +8,21 @@ import loupe from '../public/Images/loupe.svg'
 import background from '../public/Images/road.jpg'
 import { motion, useAnimation } from "framer-motion"
 import InputAutocomplete from './InputAutocomplete';
-
+import DatePicker from "react-datepicker";
+import TimePicker from 'react-time-picker';
 import elipse from './../public/Images/Ellipse 1.png'
 import elipseFill from './../public/Images/Ellipse 2.png'
 import point from './../public/Images/Vector.png'
+
+import 'rc-time-picker/assets/index.css';
+import "react-datepicker/dist/react-datepicker.css";
 
 function Reservation() {
     const [pickUp, setPickUp] = useState(null);
     const [dropOff, setDropOff] = useState(null);
     const [distance, setDistance] = useState(null);
-    const [date, setDate] = useState(null);
-    const [time, setTime] = useState(null);
+    const [date, setDate] = useState(false);
+    const [time, setTime] = useState('10:00');
     const [rotate, setRotate] = useState(0);
     const [ libraries ] = useState(['places']);
     useEffect(() => {
@@ -96,7 +100,9 @@ function Reservation() {
                             </div>
                         </div>
                         <div className="date-time">
-                            <input type="date" className='input-date play-fair-font' onChange={(e)=>setDate(e.target.value)} />
+                            <DatePicker className='input-date play-fair-font' placeholderText="Click to select a date" selected={date} onChange={(date) => setDate(date)}/>
+                            {/* <TimePicker showSecond={false} defaultValue={now} className="input-time play-fair-font" onChange={onChange} format={format} inputReadOnly/> */}
+                            {/* <input type="date" className='input-date play-fair-font' onChange={(e)=>setDate(e.target.value)} /> */}
                             <input type="time" className='input-time play-fair-font' onChange={(e)=>setTime(e.target.value)} />
                         </div>  
                         {/* <div className="options">

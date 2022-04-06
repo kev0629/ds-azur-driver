@@ -469,6 +469,11 @@ p.result-quot{
 }
 
 
+.react-datepicker__day--selected:hover,.react-datepicker__day--selected{
+  background-color: #333 !important;
+}
+
+
 
 @media screen and (max-width: 1175px) { /* Little screen */
 .nav>ul>li{
