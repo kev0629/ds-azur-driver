@@ -43,10 +43,11 @@ a {
   width: 100%;
 }
 .logo-section{
-  margin-bottom: 10px !important;
-  margin-left: 50px !important;  
+  bottom: 10px;
+  left: 10px;  
+  /* margin: auto !important; */
   display: inline-block;
-  position: relative
+  position: relative;
 }
 .title{
   display: inline-block;
@@ -631,7 +632,7 @@ p.result-quot{
 }
 
 
-@media screen and (max-width: 640px) { /* Phone */
+@media screen and (max-width: 640px) { /* Phone landscape */
 
   .reservation-section {
     padding: 20px;
@@ -661,4 +662,25 @@ p.result-quot{
   .icon-search{
     left: 200px;
   }
+}
+
+@media screen and (max-width: 560px) {
+
+  .nav-burger>svg{
+    width:30px;
+    height: 30px;
+  }
+    .main-title{
+      font-size: 20px;
+      line-height: 33px;
+    }
+    .secondary-title{
+      font-size: 10px;
+    }
+    .nav-burger{
+      margin-right: 0;
+    }
+    .logo-section{
+      width: 75px;
+    }
 }
