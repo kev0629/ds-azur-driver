@@ -3,26 +3,30 @@ import React, {useState, useEffect} from 'react'
 import {motion, AnimatePresence} from 'framer-motion'
 import TittleSection from './TittleSection'
 import Carousel from 'react-elastic-carousel'
+import { Slide } from "react-slideshow-image";
 import Image from 'next/image'
 import { HiOutlineChevronUp,HiOutlineChevronDown} from 'react-icons/hi'
-import presentation1 from './../public/Images/presentation.png'
-import presentation2 from './../public/Images/presentation.png'
-import presentation3 from './../public/Images/presentation.png'
-import presentation4 from './../public/Images/presentation.png'
+import presentation1 from './../public/Images/Frame 7.png'
+import presentation2 from './../public/Images/Frame 8.png'
+import presentation3 from './../public/Images/Frame 9.png'
+import presentation4 from './../public/Images/Frame 11.png'
+import useDimension from '../Hooks/useDimension';
+import 'react-slideshow-image/dist/styles.css'
 
 
 
 function Prestation() {
     const [handelList, setHandelList] = useState(false);
-    const [breakPoints, setBreakPoints] = useState([
-        { width: 1, itemsToShow: 1 },
-        { width: 550, itemsToShow: 2 },
-        { width: 850, itemsToShow: 3 },
-        { width: 1150, itemsToShow: 4},
-        { width: 1450, itemsToShow: 5 },
-        { width: 1750, itemsToShow: 6 },
-      ]
-      );
+    const [slidesToShow, setSlidesToShow] = useState(4); 
+      const properties = {
+        duration: 3000,
+        autoplay: false,
+        indicators: true,
+      };
+      
+    
+    const  height  = useDimension();
+
     // const [listHeight, setListHeight] = useState('auto');
     // useEffect(() => {
     //     if (handelList){
@@ -34,6 +38,9 @@ function Prestation() {
     //     }
         
     // }, [handelList]);
+
+
+    
 
     return (
         <section className='prestation' id='prestation'>
@@ -47,19 +54,30 @@ function Prestation() {
                         <motion.div 
                         onClick={() => setHandelList(!handelList)} 
                         style={{textAlign:'center'}}>
-                            {handelList?<HiOutlineChevronUp/>:<HiOutlineChevronDown/> }
+                            {handelList?<HiOutlineChevronUp/>:'Voir nos prestations en détail ' }
+                            {handelList?'':<HiOutlineChevronDown/>}
                         </motion.div>
                     </motion.div>
                 </div>
             </div>
-            <div className="caroussel">
+            <div>
+                <div>
+                <Slide {...properties} >
+                    <Card   img={presentation1}  title={"SÉCURITÉ ET DISCRÉTION"} text={'Nous assurons votre transport avec professionnalisme.'} />
+                    <Card   img={presentation2}  title={"SERVICE DE QUALITÉ"} text={'Un service haut de gamme destiné à rendre vos trajets plus agréables.'} />
+                    <Card   img={presentation3}  title={"PONCTUALITÉ ET CONFORT"} text={'Voyagez à bord de véhicules luxueux avec de nombreux services.'} />
+                    <Card   img={presentation4}  title={"TRANSPARANCE ET SIMPLICITÉ"} text={'Les tarifs sont forfaitaires et établis à l’avance lors de la demande de réservation.'} />
+                </Slide>
+                </div>
+                </div>
+            {/* <div className="caroussel">
             <Carousel itemsToShow={4} breakPoints={breakPoints} pagination={false} >
                 <Card   img={presentation1}  title={"SÉCURITÉ ET DISCRÉTION"} text={'Nous assurons votre transport avec professionnalisme.'} />
-                <Card   img={presentation1}  title={"SERVICE DE QUALITÉ"} text={'Un service haut de gamme destiné à rendre vos trajets plus agréables.'} />
-                <Card   img={presentation1}  title={"PONCTUALITÉ ET CONFORT"} text={'Voyagez à bord de véhicules luxueux avec de nombreux services.'} />
-                <Card   img={presentation1}  title={"TRANSPARANCE ET SIMPLICITÉ"} text={'Les tarifs sont forfaitaires et établis à l’avance lors de la demande de réservation.'} />
+                <Card   img={presentation2}  title={"SERVICE DE QUALITÉ"} text={'Un service haut de gamme destiné à rendre vos trajets plus agréables.'} />
+                <Card   img={presentation3}  title={"PONCTUALITÉ ET CONFORT"} text={'Voyagez à bord de véhicules luxueux avec de nombreux services.'} />
+                <Card   img={presentation4}  title={"TRANSPARANCE ET SIMPLICITÉ"} text={'Les tarifs sont forfaitaires et établis à l’avance lors de la demande de réservation.'} />
             </Carousel>
-            </div>
+            </div> */}
             
         </section>
     )
