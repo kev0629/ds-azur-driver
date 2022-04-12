@@ -37,7 +37,7 @@ const Navbar = (props) => {
                     <IoMdClose onClick={() => setHandelBurger(false)} />
                     :<IoMdMenu onClick={() => (setHandelBurger(true) )} />} 
                 </div>
-                <motion.div  className='nav' initial="visible" animate={handelBurger|| browserWidth>960? "visible":"hidden"} variants={nav_actions} >
+                <motion.div  className='nav-menu' initial="visible" animate={handelBurger|| browserWidth>960? "visible":"hidden"} variants={nav_actions} >
                     {/* initial="visible" animate={handelBurger? "hidden":"visible"} variants={nav_actions} */}
                     <motion.ul 
                         // initial="hidden"

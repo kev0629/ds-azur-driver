@@ -11,6 +11,7 @@ import presentation2 from './../public/Images/Frame 8.png'
 import presentation3 from './../public/Images/Frame 9.png'
 import presentation4 from './../public/Images/Frame 11.png'
 import useDimension from '../Hooks/useDimension';
+
 import 'react-slideshow-image/dist/styles.css'
 
 
@@ -18,10 +19,35 @@ import 'react-slideshow-image/dist/styles.css'
 function Prestation() {
     const [handelList, setHandelList] = useState(false);
     const [slidesToShow, setSlidesToShow] = useState(4); 
-      const properties = {
+    const properties = {
         duration: 3000,
+        slidesToShow: 1,
+        slidesToScroll: 1,
         autoplay: false,
         indicators: true,
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 4,
+                    slidesToScroll: 3
+                }
+            },
+            {
+                breakpoint: 500,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2
+                }
+            }
+        ]
+      };
+      const style = {
+        textAlign: 'center',
+        background: 'grey',
+        padding: '0 0 200px 0',
+        margin: '10px',
+        fontSize: '30px'
       };
       
     
@@ -62,7 +88,7 @@ function Prestation() {
             </div>
             <div>
                 <div>
-                <Slide {...properties} >
+                <Slide {...properties} style={{margin:'10px'}}>
                     <Card   img={presentation1}  title={"SÉCURITÉ ET DISCRÉTION"} text={'Nous assurons votre transport avec professionnalisme.'} />
                     <Card   img={presentation2}  title={"SERVICE DE QUALITÉ"} text={'Un service haut de gamme destiné à rendre vos trajets plus agréables.'} />
                     <Card   img={presentation3}  title={"PONCTUALITÉ ET CONFORT"} text={'Voyagez à bord de véhicules luxueux avec de nombreux services.'} />

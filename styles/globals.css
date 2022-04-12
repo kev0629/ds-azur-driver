@@ -75,7 +75,7 @@ a {
   padding: 10px;
   cursor: pointer;
 }
-.nav{
+.nav-menu{
   display: inline-block;
   width: auto;
   right: 138px;
@@ -89,14 +89,14 @@ a {
 .nav-title{
   cursor: pointer;
 }
-.nav>ul{
+.nav-menu>ul{
   margin-block-start: 0;
   margin-block-end: 0;
   padding-inline-start: 0;
   display: block;
   text-align: right;
 }
-.nav>ul>li{
+.nav-menu>ul>li{
   display: inline;
   text-align: right;
   padding-left: 30px;
@@ -478,7 +478,7 @@ p.result-quot{
 
 
 @media screen and (max-width: 1175px) { /* Little screen */
-.nav>ul>li{
+.nav-menu>ul>li{
   padding-left: 10px;
   padding-right: 10px;
   }
@@ -539,7 +539,7 @@ p.result-quot{
     width:50px;
     height: 50px;
   }
-  .nav{
+  .nav-menu{
     display: block;
     position: relative;
     right: auto;
@@ -547,7 +547,7 @@ p.result-quot{
     background-color: #333;
   }
 
-  .nav>ul>li{
+  .nav-menu>ul>li{
     display: block;
     position: relative;
     text-align: center;
