@@ -105,6 +105,7 @@ function Reservation() {
                             <div className='point-res'>
                                 <Image src={point} alt='point' />
                             </div>
+                            
                             <div className="icon-search">
                                 <Image src={loupe} alt='search' />
                             </div>
@@ -118,7 +119,8 @@ function Reservation() {
                         {/* <div className="options">
                             <button>Options</button>
                         </div> */}
-                        <LoadScript
+                    </div>
+                    <LoadScript
                             googleMapsApiKey={process.env.NEXT_PUBLIC_GOOGLE_MAP_API_KEY}
                             libraries={libraries}>
                             {pickUp&&dropOff&&<DistanceMatrixService
@@ -134,20 +136,21 @@ function Reservation() {
                             }
                             }
                             />}
-                            <div className="result val-km">
-                                <motion.div  animate={{ rotate: rotate }} transition={{ duration: 1 }}> 
-                                    <Image src={weel} width={315} alt='distance' height={315} layout="responsive"/>
-                                </motion.div>
-                                <p className='result-quot'>{distance?distance+' km':''}</p>
-                            </div>
-                            <div className="result val-eur">
-                                <motion.div  animate={{ rotate: rotate }} transition={{ duration: 1 }}>
-                                    <Image src={weel} width={315} alt='prix' height={315} layout="responsive"/>
-                                </motion.div>
-                                <p className='result-quot'>{distance?(distance*3).toFixed(2)+' €':''} </p>
+                            <div style={{display: 'flex',justifyContent: 'center',alignItems: 'center',paddingBottom:25}}>
+                                <div className='wheel'>
+                                    <motion.div  animate={{ rotate: rotate }} transition={{ duration: 1 }}> 
+                                        <Image src={weel} width={315} alt='distance' height={315} layout="responsive"/>
+                                    </motion.div>
+                                    <div className='result-quot'>{distance?distance+' km':''}</div>
+                                </div>
+                                <div className='wheel'>
+                                    <motion.div  animate={{ rotate: rotate }} transition={{ duration: 1 }}>
+                                        <Image src={weel} width={315} alt='prix' height={315} layout="responsive"/>
+                                    </motion.div>
+                                    <div className='result-quot'>{distance?(distance*2.5).toFixed(2)+' €':''} </div>
+                                </div>
                             </div>
                         </LoadScript>
-                    </div>
         </section>
     )
 }

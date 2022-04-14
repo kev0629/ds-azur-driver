@@ -2,11 +2,11 @@ import React from "react";
 import Image from "next/image";
 export function Card(props) {
     const style = {
-        textAlign: 'center',
-        // background: 'grey',
-        padding: '0 0 100px 0',
-        margin: '10px',
-        fontSize: '30px'
+        // textAlign: 'center',
+        // // background: 'grey',
+        // padding: '0 0 100px 0',
+        // margin: '10px',
+        // fontSize: '30px'
       };
       
   return (
@@ -32,7 +32,7 @@ export function Card(props) {
                         layout='responsive'
                         width={298}
                         height={277}  />
-                        <p className='card-title beba-font' style={{height:'80px'}}>{props.title}</p>
+                        <p className='card-title beba-font' style={{height:'20px'}}>{props.title}</p>
                         <div className="card-line"></div>
                         <p style={{height:'80px'}} className='card-text text-card'>{props.text}</p>
                 </div>
