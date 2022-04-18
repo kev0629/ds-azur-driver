@@ -11,7 +11,7 @@ export default function Footer() {
                 Propriétaire du site 
                 M David Saffioti <br />
                 Site réalisé et géré par KS Project <br />
-                Hébergement chez .... <br />
+                Hébergement chez o2Switch <br />
 
 
                 </div> 
