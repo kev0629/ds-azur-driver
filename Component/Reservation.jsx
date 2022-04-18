@@ -111,10 +111,10 @@ function Reservation() {
                             </div>
                         </div>
                         <div className="date-time">
-                            <DatePicker className='input-date play-fair-font' placeholderText="Choisissez une date" selected={date} onChange={(date) => setDate(date)}/>
+                            <DatePicker className='input-date play-fair-font' placeholderText="Date" selected={date} onChange={(date) => setDate(date)}/>
                             {/* <TimePicker showSecond={false} defaultValue={now} className="input-time play-fair-font" onChange={onChange} format={format} inputReadOnly/> */}
                             {/* <input type="date" className='input-date play-fair-font' onChange={(e)=>setDate(e.target.value)} /> */}
-                            <input type={inputTimeType} placeholder='Choisissez une heure' className='input-time play-fair-font' onClick={changeInputToTime} value={time} onChange={(e)=>setTime(e.target.value)} />
+                            <input type={inputTimeType} placeholder='Heure' className='input-time play-fair-font' onClick={changeInputToTime} value={time} onChange={(e)=>setTime(e.target.value)} />
                         </div>  
                         {/* <div className="options">
                             <button>Options</button>

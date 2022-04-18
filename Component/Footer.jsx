@@ -10,17 +10,13 @@ export default function Footer() {
                 MENTIONS LÉGALES <br />
                 Propriétaire du site 
                 M David Saffioti <br />
-                Adresse : 30 traverse des Cades 06370 Mouans Sartoux <br />
-                Tel : <a href="tel:+330608070873">06.08.07.08.73</a> <br />
-                Email :  <Link href="mailto:david.saffioti@dsazurdriver.fr">david.saffioti@dsazurdriver.fr</Link><br />
                 Site réalisé et géré par KS Project <br />
                 Hébergement chez .... <br />
 
 
                 </div> 
-                <div className='footer-right beba-font'>
+                <div className='footer-right'>
                     CONTACT<br/>
-                    <br/>
                     Adresse : 30 traverse des Cades 06370 Mouans Sartoux <br />
                     Tel : <a href="tel:+330608070873">06.08.07.08.73</a> <br />
                     Email :  <Link href="mailto:david.saffioti@dsazurdriver.fr">david.saffioti@dsazurdriver.fr</Link> <br />
