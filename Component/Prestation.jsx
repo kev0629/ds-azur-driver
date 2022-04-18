@@ -80,8 +80,8 @@ function Prestation() {
                         <motion.div 
                         onClick={() => setHandelList(!handelList)} 
                         style={{textAlign:'center'}}>
-                            {handelList?<HiOutlineChevronUp/>:'Voir nos prestations en détail ' }
-                            {handelList?'':<HiOutlineChevronDown/>}
+                            {handelList?<HiOutlineChevronUp style={{cursor:'pointer'}}/>:'Voir nos prestations en détail ' }
+                            {handelList?'':<HiOutlineChevronDown style={{cursor:'pointer'}}/>}
                         </motion.div>
                     </motion.div>
                 </div>

@@ -2,6 +2,7 @@ import React from "react";
 import Image from "next/image";
 export function Card(props) {
     const style = {
+        cursor:'grab'
         // textAlign: 'center',
         // // background: 'grey',
         // padding: '0 0 100px 0',

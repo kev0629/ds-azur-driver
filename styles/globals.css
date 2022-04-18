@@ -51,7 +51,6 @@ a {
 }
 .title{
   display: inline-block;
-  padding-left: 50px !important;
   /* padding-top: 20px !important; */
 }
 .main-title{
@@ -317,7 +316,7 @@ grid-row-gap: 10px;
   width: 193px;
   height: 40px;
   border-radius:25px 25px 0 0 ;
-  text-indent: 10px
+  text-align: center;
 }
 .input-time{
   background: #333333;
@@ -326,7 +325,8 @@ grid-row-gap: 10px;
   width: 193px;
   height: 40px;
   border-radius:0 0 25px 25px;
-  text-indent: 10px;
+  text-align: center;
+
 }
 .result-quot{
   position: absolute;
@@ -489,7 +489,7 @@ grid-row-gap: 10px;
 }
 
 .contact-presentation-button{
-  display: none;
+  display: none !important;
 }
 
 .contact-card-title{
@@ -517,6 +517,7 @@ grid-row-gap: 10px;
   }
   .icon-search{
     left: 450px;
+    
   }
 
   .contact-card{
@@ -550,6 +551,7 @@ grid-row-gap: 10px;
 
 .icon-search{
   left: 400px;
+  width: 45px;
 }
 
 .profile-pic{
@@ -622,7 +624,7 @@ grid-row-gap: 10px;
 }
 
 .contact-presentation-button{
-  display: block;
+  display: block !important;
   margin: auto;
   position: relative;
   text-align: center;
@@ -636,12 +638,10 @@ grid-row-gap: 10px;
   line-height: 22px;
   width: 90%;
   Bottom: 50px;
-  /* top: 30%;
-  left: 5%; */
 }
 
 .prestation-title{
-  grid-area: 1 / 1 / 2 / 8;
+  width: 450px;
 }
 .contact-title{
   padding: 50px;
@@ -663,10 +663,7 @@ grid-row-gap: 10px;
 
 
 @media screen and (max-width: 768px) { /* Tablet */
-  .result-quot{
-
-   
-  }
+  
 
   .reservation-section {
   width: 100%; 
@@ -681,7 +678,7 @@ grid-row-gap: 10px;
   grid-column-gap: 10px;
   grid-row-gap: 10px; 
   }
-  .title { grid-area: 1 / 1 / 2 / 7; } 
+  .title { grid-area: 1 / 1 / 2 / 7; }
   .pick-up { grid-area: 3 / 2 / 4 / 9; } 
   .drop-off { grid-area: 4 / 2 / 5 / 9; } 
   .date-time { grid-area: 2 / 4 / 3 / 6; } 
@@ -739,7 +736,8 @@ grid-row-gap: 10px;
   }
  
   .icon-search{
-    left: 200px;
+    left: 220px;
+    width: 20px;
   }
 
   .contact-title{
