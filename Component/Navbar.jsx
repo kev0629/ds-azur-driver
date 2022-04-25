@@ -45,7 +45,7 @@ const Navbar = (props) => {
                         // variants={container}
                         >
                         <motion.li >
-                            <Route to='acceuil' link='/#acceuil' nav={true}>
+                            <Route to='acceuil' link='/#accueil' nav={true}>
                                 <div onClick={() => setHandelBurger(false)} style={{display:'inline-block'}}>Accueil</div>
                             </Route>
                         </motion.li>

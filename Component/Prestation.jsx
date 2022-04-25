@@ -130,7 +130,7 @@ function PrestaListContent(props){
                     <p className='prestations-list-text'>déplacez-vous en toute tranquilité pour vos rendez-vous, reunions, séminaires ...</p> 
                     <br />
                     <br />
-                    <p className='prestations-list-title beba-font'>ORFAITS MARIAGES/ ÉVÈNEMENTS: </p>
+                    <p className='prestations-list-title beba-font'>FORFAITS MARIAGES/ ÉVÈNEMENTS: </p>
                     <p className='prestations-list-text'>profitez de votre évènement, notre chauffeur s’occupe des transferts pour vous et vos convives.</p> 
                     <br />
                     <br />

@@ -6,7 +6,7 @@ import { motion } from "framer-motion"
 
 const Main = () => {
     return (
-        <section className="home" id='acceuil'>
+        <section className="home" id='accueil'>
                 <Image src={bg} 
                 alt='Lexus'
                 className='bg-main' 
