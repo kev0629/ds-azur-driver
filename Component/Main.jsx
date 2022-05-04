@@ -16,6 +16,11 @@ const Main = () => {
                 width={1920}
                 />
                 <h1 className='slogan beba-font'>Laissez-vous conduire.</h1>
+                <motion.button whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} className='play-fair-font devis-button'>
+                <Route to='reservation' link='/#reservation' nav={false}>
+                        Devis
+                </Route>
+                </motion.button>
                 <motion.button whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} className='play-fair-font contact-button'>
                 <Route to='contact' link='/#contact' nav={false}>
                         Contact
