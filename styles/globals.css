@@ -334,14 +334,32 @@ grid-row-gap: 10px;
 }
 .input-time{
   font-size: 20px;
-  background: #333333;
+  background-color: #333333 !important;
   color: #fff;
   border: none;
-  width: 193px;
+  width: 193px !important;
   height: 40px;
   border-radius:0 0 25px 25px;
   text-align: center;
 
+}
+
+.rc-time-picker-input{
+  background-color: #333333 !important;
+  border: none !important;
+  width: 90% !important;
+}
+
+.rc-time-picker-panel-inner{
+  background-color: #333333 !important;
+}
+
+.rc-time-picker-panel-select-option-selected{
+  background-color: #444 !important;
+}
+
+.rc-time-picker-panel-select li:hover{
+  background-color: #444 !important;
 }
 .result-quot{
   position: absolute;

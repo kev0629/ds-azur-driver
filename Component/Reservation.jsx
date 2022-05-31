@@ -13,7 +13,10 @@ import elipse from './../public/Images/Ellipse 1.png'
 import elipseFill from './../public/Images/Ellipse 2.png'
 import point from './../public/Images/Vector.png'
 
-import "react-datepicker/dist/react-datepicker.css";
+import 'rc-time-picker/assets/index.css';
+import moment from 'moment';
+import TimePicker from 'rc-time-picker';
+
 
 function Reservation() {
     const [pickUp, setPickUp] = useState(null);
@@ -114,7 +117,8 @@ function Reservation() {
                             <DatePicker className='input-date play-fair-font' placeholderText="Date" selected={date} onChange={(date) => setDate(date)}/>
                             {/* <TimePicker showSecond={false} defaultValue={now} className="input-time play-fair-font" onChange={onChange} format={format} inputReadOnly/> */}
                             {/* <input type="date" className='input-date play-fair-font' onChange={(e)=>setDate(e.target.value)} /> */}
-                            <input type={inputTimeType} placeholder='Heure' className='input-time play-fair-font' onClick={changeInputToTime} value={time} onChange={(e)=>setTime(e.target.value)} />
+                            {/* <input type={inputTimeType} placeholder='Heure' className='input-time play-fair-font' onClick={changeInputToTime} value={time} onChange={(e)=>setTime(e.target.value)} />  */}
+                            <TimePicker style={{ width: 100 }} showSecond={true} defaultValue={moment()} className='input-time play-fair-font' onChange={(e)=>setTime(e.target.value)}/>
                         </div>  
                         {/* <div className="options">
                             <button>Options</button>
