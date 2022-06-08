@@ -56,16 +56,16 @@ function Reservation() {
         }
     }
 
-    const changeInputToTime = () => {
-        if (inputTimeType == 'text'){
-            var current = new Date();
-            setInputTimeType('time')
-            let h = current. getHours();
-            let m = current. getMinutes()
-            setTime(`${h}:${m}`)
+    // const changeInputToTime = () => {
+    //     if (inputTimeType == 'text'){
+    //         var current = new Date();
+    //         setInputTimeType('time')
+    //         let h = current. getHours();
+    //         let m = current. getMinutes()
+    //         setTime(`${h}:${m}`)
 
-        }
-    }
+    //     }
+    // }
 
     return (
             <section className='reservation' id='reservation'>
@@ -118,7 +118,7 @@ function Reservation() {
                             {/* <TimePicker showSecond={false} defaultValue={now} className="input-time play-fair-font" onChange={onChange} format={format} inputReadOnly/> */}
                             {/* <input type="date" className='input-date play-fair-font' onChange={(e)=>setDate(e.target.value)} /> */}
                             {/* <input type={inputTimeType} placeholder='Heure' className='input-time play-fair-font' onClick={changeInputToTime} value={time} onChange={(e)=>setTime(e.target.value)} />  */}
-                            <TimePicker style={{ width: 100 }} showSecond={true} defaultValue={moment()} className='input-time play-fair-font' onChange={(e)=>setTime(e.target.value)}/>
+                            <TimePicker style={{ width: 100 }} showSecond={false}  placeholder={'Heure'} className='input-time play-fair-font' onChange={(value)=>setTime(value && value.format('HH:mm'))}/>
                         </div>  
                         {/* <div className="options">
                             <button>Options</button>

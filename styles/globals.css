@@ -348,6 +348,10 @@ grid-row-gap: 10px;
   background-color: #333333 !important;
   border: none !important;
   width: 90% !important;
+  text-align: center;
+  font-size: 20px !important;
+  font-family: 'Playfair Display', serif !important;
+  
 }
 
 .rc-time-picker-panel-inner{
@@ -361,6 +365,8 @@ grid-row-gap: 10px;
 .rc-time-picker-panel-select li:hover{
   background-color: #444 !important;
 }
+
+
 .result-quot{
   position: absolute;
   font-size: 50px;
