@@ -14,7 +14,7 @@ import elipseFill from './../public/Images/Ellipse 2.png'
 import point from './../public/Images/Vector.png'
 
 import 'rc-time-picker/assets/index.css';
-import "react-datepicker/dist/react-datepicker.css";
+import "react-datepicker/dist/react-datepicker.css"; 
 import moment from 'moment';
 import TimePicker from 'rc-time-picker';
 
